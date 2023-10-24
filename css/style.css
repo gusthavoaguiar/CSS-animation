@@ -32,3 +32,74 @@ section {
     gap: 1rem;
     margin: 1rem;
 }
+
+#pisca {
+    width: 100px;
+    height: 100px;
+    background-color: #747e86;
+    animation-name: pisca;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pisca {
+    0%   {background-color: #747e86;}
+  25%  {background-color: red;}
+  50%  {background-color: yellow;}
+  75% {background-color: blue;}
+  100% {background-color: #747e86;}
+}
+
+#gira {
+    width: 100px;
+    height: 100px;
+    background-color: #747e86;
+    animation-name: gira;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gira {
+    from {transform: rotateX(0);}
+    to {transform: rotateX(180deg);}
+}
+
+p {
+    text-align: center;
+    pointer-events: none;
+}
+
+#some {
+    width: 100px;
+    height: 100px;
+    background-color: #747e86;
+}
+
+#some:active {
+    animation-name: some;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes some {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+#sobe{
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: #747e86;
+    position: relative;
+}
+
+#sobe:active{
+    animation-name: sobe;
+    animation-duration: 2s;
+}
+
+@keyframes sobe {
+    from {top: 0px;}
+    to {top: -100px;}
+}
