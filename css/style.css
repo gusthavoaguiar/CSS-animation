@@ -38,16 +38,16 @@ section {
     height: 100px;
     background-color: #747e86;
     animation-name: pisca;
-    animation-duration: .5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
 @keyframes pisca {
-    0%   {background-color: #747e86;}
-  25%  {background-color: red;}
-  50%  {background-color: yellow;}
-  75% {background-color: blue;}
-  100% {background-color: #747e86;}
+    0%  {background-color: #747e86;}
+    25% {background-color: red;}
+    50% {background-color: yellow;}
+    75% {background-color: blue;}
+    100% {background-color: #747e86;}
 }
 
 #gira {
@@ -73,9 +73,10 @@ p {
     width: 100px;
     height: 100px;
     background-color: #747e86;
+    border: none;
 }
 
-#some:active {
+#some:focus {
     animation-name: some;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -94,7 +95,7 @@ p {
     position: relative;
 }
 
-#sobe:active{
+#sobe:focus {
     animation-name: sobe;
     animation-duration: 2s;
 }
@@ -102,4 +103,54 @@ p {
 @keyframes sobe {
     from {top: 0px;}
     to {top: -100px;}
+}
+
+#explode {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #747e86;
+}
+
+#explode:focus {
+    animation-name: explode;
+    animation-duration: 3s;
+}
+
+@keyframes explode {
+    35% {background-color: yellow; width: 125px; height: 125px;}
+    60% {background-color: yellow; width: 137px; height: 137px;}
+    80% {background-color: red; width: 150px; height: 150px; opacity: 100%;}
+    100% {opacity: 0%;}
+}
+
+#loading {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    gap: 16px;
+    margin-left: 100px;
+    position: relative;
+}
+
+#circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #747e86;
+    animation: load 1s infinite;
+}
+
+@keyframes load {
+    100% {transform: scale(0);
+    opacity: 0;}
+}
+
+#circle:nth-child(2){
+    animation-delay: .2s;
+
+}
+
+#circle:nth-child(3){
+    animation-delay: .4s;
 }
