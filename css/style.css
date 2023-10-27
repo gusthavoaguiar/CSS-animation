@@ -33,6 +33,16 @@ section {
     margin: 1rem;
 }
 
+p {
+    text-align: center;
+    pointer-events: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+
 #pisca {
     width: 100px;
     height: 100px;
@@ -64,11 +74,6 @@ section {
     to {transform: rotateX(180deg);}
 }
 
-p {
-    text-align: center;
-    pointer-events: none;
-}
-
 #some {
     width: 100px;
     height: 100px;
@@ -93,6 +98,7 @@ p {
     height: 100px;
     background-color: #747e86;
     position: relative;
+    border: none;
 }
 
 #sobe:focus {
@@ -110,6 +116,7 @@ p {
     width: 100px;
     height: 100px;
     background-color: #747e86;
+    border: none;
 }
 
 #explode:focus {
@@ -125,12 +132,18 @@ p {
 }
 
 #loading {
-    width: 200px;
+    width: 400px;
     height: 200px;
     display: flex;
-    gap: 16px;
-    margin-left: 100px;
+    gap: 64px;
+    margin: auto;
     position: relative;
+}
+
+#column {
+    display: flex;
+    gap: 16px;
+
 }
 
 #circle {
@@ -142,8 +155,7 @@ p {
 }
 
 @keyframes load {
-    100% {transform: scale(0);
-    opacity: 0;}
+    100% {transform: scale(0); opacity: 0;}
 }
 
 #circle:nth-child(2){
@@ -153,4 +165,32 @@ p {
 
 #circle:nth-child(3){
     animation-delay: .4s;
+}
+
+#slide {
+    width: 250px;
+    height: 200px;
+    background-color: #747e86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 3s infinite;
+}
+
+.gusta{
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.jao{
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0% {opacity: 100%;}
+    50% {opacity: 0%;}
 }
